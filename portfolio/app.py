@@ -9,7 +9,7 @@ BIO = (
     "Fourth-year Data Science student at the Faculty of Computers and Data Science, "
     "Alexandria University."
 )
-PHOTO = "photo.jpeg"  
+PHOTO = os.path.join(os.path.dirname(__file__), "photo.jpeg")
 SKILLS = ["Python", "Pandas", "Scikit-learn", "SQL", "Power BI", "Streamlit"]
 LINKS = {
     "GitHub": "https://github.com/shahdhagag-alt",
