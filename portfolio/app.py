@@ -72,3 +72,20 @@ st.header("Contact")
 cols = st.columns(len(LINKS))
 for c, (label, url) in zip(cols, LINKS.items()):
     c.link_button(label, url)
+
+
+st.divider()
+
+# CV
+st.header("CV")
+CV_FILE = os.path.join(os.path.dirname(__file__), "cv.pdf")
+if os.path.exists(CV_FILE):
+    with open(CV_FILE, "rb") as f:
+        st.download_button(
+            "📄 Download my CV",
+            f,
+            file_name="Shahd_CV.pdf",
+            mime="application/pdf",
+        )
+else:
+    st.info("CV file not found")
